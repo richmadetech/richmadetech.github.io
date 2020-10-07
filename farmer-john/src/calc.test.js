@@ -3,11 +3,12 @@ import { render } from '@testing-library/react';
 import Calculator from './calc';
 import App from './App';
 
-test('calculates zero', () => {
+test('zero bags returns please enter number of bags', () =>{
   const numberOfBags = 0; 
   var calculator = new Calculator(numberOfBags);
   var totalCost = calculator.calculateCost();
-  expect(totalCost).toBe("£0.00");
+
+  expect(totalCost).toBe("Please enter number of bags");
 });
 
 test('calculates 50p', () => {
@@ -16,10 +17,3 @@ test('calculates 50p', () => {
     var totalCost = calculator.calculateCost();
     expect(totalCost).toBe("£0.50");
 });
-
-test('calcuates 50p from input', () => {
-    const numberOfBags = document.getElementById("number_of_bags").value; 
-    var calculator = new Calculator(numberOfBags);
-    var totalCost = calculator.calculateCost();
-    expect(totalCost).toBe("£0.50");
-})

@@ -7,3 +7,7 @@ import App from './App';
 //   const linkElement = getByText(/learn react/i);
 //   expect(linkElement).toBeInTheDocument();
 // });
+
+test('placeholder', () => {
+
+});
